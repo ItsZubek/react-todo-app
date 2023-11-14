@@ -10,10 +10,10 @@ function TodoForm(props) {
             id: Math.floor(Math.random() * 10000),
             text: input
         });
-        setInput = '';
+         setInput('');
     }
-    const handleChange = () => {
-        
+    const handleChange = (e) => {
+        setInput(e.target.value);
     }
     return(
     <form className="todo-form" onSubmit={handleSubmit}>
